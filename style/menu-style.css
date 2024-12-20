@@ -76,10 +76,11 @@ a{
     gap: 3rem;
     margin: 1rem;
 }
-.nav-blk{
-    padding: auto;
-    margin-right:2rem ;
+#nav-links:hover {
+    color: rgb(140, 0, 255);
+    text-decoration: underline;
 }
+
 /*---- end of header-----*/
 .menu-section{
     display: flex;
