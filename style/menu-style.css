@@ -17,6 +17,7 @@ body {
 .head-blk { 
     background: #3a210f;
     position: fixed;
+    z-index: 999;
     width: 100%;
     height: 15vh;
     padding:0.5rem;
