@@ -16,11 +16,16 @@ body {
 
 .head-blk { 
     background: #3a210f;
-    width: 100%;
-    height: 15vh;
-    padding: 0.5rem;
+    position: fixed;
+    z-index: 999;
+    width: 100vw;
+    height: auto;
+    padding: 1rem;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
     transition: all 0.3s ease-in-out;
+}
+.head-blk h2{
+    color: aliceblue;
 }
 
 img {
@@ -37,13 +42,14 @@ a {
 .content {
     display: flex;
     place-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     transition: all 0.5s ease-in-out;
 }
 
 .brand-name {    
     display: flex;
-    align-items: center;        
+    align-items: center; 
+    gap: 5rem;      
     margin: 0;
     padding: 0;
 }
@@ -55,23 +61,8 @@ a {
 }
 
 #logo {
-    max-width: 80px;
+    max-width: 50px;
     height: auto;
-}
-
-.search-bar {
-    width: 50%;
-    height: auto;
-    padding: 1.5rem;
-}
-
-#search {
-    width: 100%;
-    height: 50px;
-    border-radius: 30px;
-    padding-left: 1.5rem;
-    border: none;
-    transition: all 0.5s ease;
 }
 
 .nav-links {
@@ -87,26 +78,21 @@ a {
     text-decoration: underline;
 }
 
-.nav-blk {
-    padding: auto;
-    margin-right: 2rem;
-}
-
 /*------END OF HEADER------- */
 
 article {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height: 85vh;
+    height: 100vh;
     background-color: #fff4d5;
     transition: background-color 0.5s ease-in-out;
 }
 
 .article-content {
     display: flex;
-    gap: 1rem;
-    justify-content: center;
+    gap: 2rem;
+    justify-content: space-evenly;
     align-items: center;
     transition: all 1s ease-in-out;
 }
@@ -120,7 +106,7 @@ article {
 
 #article-logo {
     max-width: 250rem;
-    height: 500px;
+    height: 450px;
     border-radius: 50%;
     border: solid white;
     box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
@@ -149,28 +135,27 @@ section h1 {
 .section-layout {
     background: #925a31;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    height: 100vh;
+    gap: 3rem;
+    height: 90vh;
+    width: 100%;
     justify-content: center;
+    padding: 3rem;
     transition: background-color 0.5s ease-in-out;
 }
 
-.body-content {
-    display: flex;
-    gap: 7rem;
-    justify-content: center;
-    align-content: center;
-}
 
 .container {
+    display: flex;
+    flex-direction: column;
     background: #fff4d5;
     border: 3px solid black;
     border-radius: 15px;
+    justify-content: space-evenly;
     align-items: center;
     padding: 2rem;
     height: auto;
-    width: 30%;
+    width:40% ;
     transition: transform 0.5s ease;
 }
 
@@ -194,6 +179,7 @@ section h1 {
 .product-info {
     margin-top: 1rem;
     line-height: 2rem;
+    width: 100%;
 }
 
 .product-info h3 {
@@ -222,6 +208,8 @@ section h1 {
 }
 
 .section-2{
+    height: auto;
+    width: 100%;
     padding:1.5rem;
     background: #fff4d5;
 }
@@ -257,6 +245,8 @@ section h1 {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
 }
 footer{
+    width: 100%;
+    height: auto;
     background: #3a210f;
     color: white;
     font-size: 0.8rem;
@@ -265,10 +255,9 @@ footer{
 
 /*------- MEDIA QUERIES ------- */
 
-@media (max-width: 900px) {
+@media (max-width: 930px)  {
      
     .content {
-        flex-direction: column;
         flex-wrap: wrap;
     }
     .head-text{
@@ -281,22 +270,11 @@ footer{
         gap: 1rem;
         margin: 0px;
     }
-    .search-bar{
-        width:100%;
-        height: 10vh;
+    article{
+        justify-content: center;
+        align-items: center;
     }
-    #search{
-        width: 100% ;
-        height: 30px;
-        border-radius: 30px;
-        padding-left: 1.5rem;
-        border: none;
-   }
-   article{
-    justify-content: center;
-    align-items: center;
-   }
-    .brand-name,.logo,.head-text{
+    .logo,.head-text{
         display:none;
     }
     .article-logo{
@@ -327,7 +305,7 @@ footer{
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 722px) {
     .nav-links {
         gap: 1rem;
     }
@@ -340,49 +318,37 @@ footer{
         font-size: 2rem;
     }
 
-    .container {
-        width: 100%;
-    }
-
     .head-blk {
         padding: 0.5rem;
     }
     .content {
         display: flex;
         flex-wrap: wrap;
-        
     }
-    .brand-name,.logo,.head-text,.contact-logo{
+    .brand-name, .content{
+        gap: 1rem;
+    }
+    .logo,.head-text,.contact-logo{
         display:none;
     }
     .nav-blk{
         margin: 0px;
     }
-    .search-bar{
-        width:100%;
-        height: auto;
-    }
-    #search{
-        width: 100% ;
-        height: 30px;
-        border-radius: 30px;
-        padding-left: 1.5rem;
-        border: none;
-   }
     .nav-links {
         font-size: 0.8rem;
         margin: 0px;
     }
     .container {
         display: flex;
+        flex-direction: row;
         background: #fff4d5;
         border: 3px solid black;
         border-radius: 15px;
         align-items: center;
         justify-content: center;
         padding:1rem;
-        gap: 2rem;
-        width: 40vh;
+        gap: 0.5rem;
+        width: 50vh;
         height: auto;
     }
     
@@ -395,11 +361,11 @@ footer{
     }
 
     .image{
-        width: 60%;
-        height: 30vh;
+        width: 50%;
+        height: auto;
     }
     .product-info{
-        width: 170px;
+        width: 50%;
 
     }
 
@@ -410,7 +376,7 @@ footer{
         place-items: center;
     }
     .contacts-links, #links{
-        font-size: 0.7rem;
+        font-size: 1rem;
     }
     .article{
         display: flex;
@@ -418,8 +384,7 @@ footer{
         justify-content: center;
     }
     .article-content{
-        display:grid;
-        grid-template-columns: repeat(1, 1fr);
+        display:flex;
         gap: 1rem;
         padding: 1rem;
         place-items:center;
@@ -433,5 +398,18 @@ footer{
         text-align: center;
     }
 
+}
+@media (max-width: 530px){
+    .article-logo{
+        width:auto;
+        height:auto;
+    }
+    #article-logo{
+        width: 60vw;
+        height: auto;
+    }
+    .brand-name, .content{
+        gap: 1rem;
+    }
 }
 
